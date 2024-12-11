@@ -1,0 +1,13 @@
+program {
+    main() -> void {
+        int a = -1;
+        read(a);
+        while ((a<0) || (a > 9)) {
+            print(" Enter a number in the range 0-9: ");
+            print("\n")
+            read(a);
+        }
+        print( "a = ", a)
+        print( "\n")
+    }
+}

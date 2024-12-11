@@ -1,0 +1,14 @@
+program {
+    fact(int num) -> {
+        if (n >= 1 ) {
+            return num*fact(num-1);
+        }
+        else {
+            return 1;
+        }
+    }
+
+    main() -> void {
+        print(@fact(2));
+    }
+}

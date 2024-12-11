@@ -1,0 +1,13 @@
+program {
+    greater(int num1, int num2) -> int {
+        if (num1 > num2) {
+            return num1;
+        }
+        else {
+            return num2;
+        }
+    }
+    main() -> void {
+        print(@greater(10,5));
+    }
+}

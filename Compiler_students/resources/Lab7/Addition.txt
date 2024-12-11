@@ -1,0 +1,8 @@
+program {
+    suma (int a, int b) -> int {
+        return a + b;
+    }
+    main() -> void {
+        print("Suma = ", @suma(10,5));
+    }
+}

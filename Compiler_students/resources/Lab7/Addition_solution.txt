@@ -1,0 +1,18 @@
+program
+(1)-> 'PROGRAM' 'LBRACKET' program_body 'RBRACKET'
+(2)-> 'PROGRAM' 'LBRACKET' ( variable_definition SEMICOLON | function_definition)* main_function 'RBRACKET'
+(4)-> 'PROGRAM' 'LBRACKET' 'IDENTIFIER' 'LPAREN' (formal_parameters)? 'RPAREN' 'ARROW' (VOID | type) block ( variable_definition SEMICOLON | function_definition)* main_function 'RBRACKET'
+(5)-> PROGRAM LBRACKET IDENTIFIER LPAREN type IDENTIFIER (COMMA type IDENTIFIER)* 'RPAREN' 'ARROW' (VOID | type) block ( variable_definition SEMICOLON | function_definition)* main_function 'RBRACKET'
+(6)-> PROGRAM LBRACKET IDENTIFIER LPAREN primitive_type IDENTIFIER (COMMA type IDENTIFIER)* 'RPAREN' 'ARROW' (VOID | type) block ( variable_definition SEMICOLON | function_definition)* main_function 'RBRACKET'
+(7)-> PROGRAM LBRACKET IDENTIFIER LPAREN INT IDENTIFIER (COMMA type IDENTIFIER)* 'RPAREN' 'ARROW' (VOID | type) block ( variable_definition SEMICOLON | function_definition)* main_function 'RBRACKET'
+(6)-> PROGRAM LBRACKET IDENTIFIER LPAREN INT IDENTIFIER COMMA primitive_type IDENTIFIER 'RPAREN' 'ARROW' (VOID | type) block ( variable_definition SEMICOLON | function_definition)* main_function 'RBRACKET'
+(7)-> PROGRAM LBRACKET IDENTIFIER LPAREN INT IDENTIFIER COMMA INT IDENTIFIER 'RPAREN' 'ARROW' (VOID | type) block ( variable_definition SEMICOLON | function_definition)* main_function 'RBRACKET'
+(6)-> PROGRAM LBRACKET IDENTIFIER LPAREN INT IDENTIFIER COMMA INT IDENTIFIER 'RPAREN' 'ARROW' primitive_type block ( variable_definition SEMICOLON | function_definition)* main_function 'RBRACKET'
+(7)-> PROGRAM LBRACKET IDENTIFIER LPAREN INT IDENTIFIER COMMA INT IDENTIFIER 'RPAREN' 'ARROW' INT block ( variable_definition SEMICOLON | function_definition)* main_function 'RBRACKET'
+(9)-> PROGRAM LBRACKET IDENTIFIER LPAREN INT IDENTIFIER COMMA INT IDENTIFIER 'RPAREN' 'ARROW' INT LBRACKET (statement)* RBRACKET ( variable_definition SEMICOLON | function_definition)* main_function 'RBRACKET'
+(10)-> PROGRAM LBRACKET IDENTIFIER LPAREN INT IDENTIFIER COMMA INT IDENTIFIER 'RPAREN' 'ARROW' INT LBRACKET simple_statement SEMICOLON RBRACKET ( variable_definition SEMICOLON | function_definition)* main_function 'RBRACKET'
+(11)-> PROGRAM LBRACKET IDENTIFIER LPAREN INT IDENTIFIER COMMA INT IDENTIFIER 'RPAREN' 'ARROW' INT LBRACKET return_statement SEMICOLON RBRACKET ( variable_definition SEMICOLON | function_definition)* main_function 'RBRACKET'
+(16)-> PROGRAM LBRACKET IDENTIFIER LPAREN INT IDENTIFIER COMMA INT IDENTIFIER 'RPAREN' 'ARROW' INT LBRACKET RETURN (assignable)? SEMICOLON RBRACKET ( variable_definition SEMICOLON | function_definition)* main_function 'RBRACKET'
+(22)-> PROGRAM LBRACKET IDENTIFIER LPAREN INT IDENTIFIER COMMA INT IDENTIFIER 'RPAREN' 'ARROW' INT LBRACKET RETURN expression SEMICOLON RBRACKET ( variable_definition SEMICOLON | function_definition)* main_function 'RBRACKET'
+
+
