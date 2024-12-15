@@ -56,7 +56,7 @@ public class LexerImpl extends Lexer<TokenType> {
 
                 //2 character operators.txt
                 case '-' : return handleTwoCharOp('>', TokenType.MINUS, TokenType.ARROW);
-                case '=' : return handleTwoCharOp('=', TokenType.EQUALS, TokenType.BECOMES);
+                case '=' : return handleTwoCharOp('=', TokenType.BECOMES, TokenType.EQUALS);
                 case '>' : return handleTwoCharOp('=', TokenType.GREATER, TokenType.GREATER_EQ);
                 case '<' : return handleTwoCharOp('=', TokenType.LESS, TokenType.LESS_EQ);
                 case '!' : return handleTwoCharOp('=', TokenType.NOT, TokenType.NOTEQUALS);
@@ -215,7 +215,7 @@ public class LexerImpl extends Lexer<TokenType> {
     }
 
     public static void main(String[] args) throws IOException {
-        Lexer<TokenType> lexer = new LexerImpl(new SourceImpl("Compiler_students/resources/operators.txt"));
+        Lexer<TokenType> lexer = new LexerImpl(new SourceImpl("Compiler_students/resources/Fib.txt"));
         System.out.println(CompilerTestHelper.getTokensAsString(lexer));
     }
 

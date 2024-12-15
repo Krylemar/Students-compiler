@@ -41,9 +41,20 @@ public enum TokenType {
 
     private static Set<String> keywords = new HashSet<>();
     static{
-        for (TokenType tokenType : TokenType.values()) {
-            keywords.add(tokenType.value);
-        }
+        keywords.add(INT.value);
+        keywords.add(CHAR.value);
+        keywords.add(BOOLEAN.value);
+        keywords.add(VOID.value);
+        keywords.add(WHILE.value);
+        keywords.add(IF.value);
+        keywords.add(ELSE.value);
+        keywords.add(RETURN.value);
+        keywords.add(LENGTH.value);
+        keywords.add(PROGRAM.value);
+        keywords.add(PRINT.value);
+        keywords.add(READ.value);
+        keywords.add(TRUE.value);
+        keywords.add(FALSE.value);
     }
 
     public static boolean isKeyword(TokenType tokenType) {
